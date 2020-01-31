@@ -1,0 +1,168 @@
+@import
+url('https://fonts.googleapis.com/css?family=Inconsolata|Lekton&display=swap');
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  font-family: 'Inconsolata', monospace;
+}
+img{
+  max-width: 100%;
+}
+
+/*Header
+=============*/
+header{
+  padding: 40px 0px;
+  margin: auto;
+}
+
+header div{
+  max-width: 1140px;
+  margin: auto;
+  padding: 10px;
+}
+
+header .logo{
+  width: 200px;
+}
+
+header .menu{
+  display: inline;
+  font-family: 'Lekton', sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 13px 15px;
+  float: right;
+}
+
+
+/*Image Header
+=============*/
+div.img-container{
+  overflow: hidden;
+  position: relative;
+  height: 188px;
+  text-align: center;
+}
+
+div.img-container img{
+  margin-top: -30%;
+}
+
+div.img-container div{
+  position: absolute;
+  font-size: 28px;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+  div.img-container img{
+    margin-top: 5;
+  }
+
+
+/*Body
+=============*/
+
+
+/*footer
+=============*/
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 50px 0 40px;
+}
+
+hr{
+  max-width: 1140px;
+  border: 1px solid #EEEEEE;
+  border-left: none;
+  border-right: none;
+}
+
+.footer ul{
+  display: inline-block;
+  margin: 3;
+  padding: 50px 0px 40px;
+}
+
+.footer .fab{
+  color: black;
+}
+
+.footer p{
+  font-family: Lekton;
+  color: #777777;
+  font-size: 15px;
+}
+
+.footer p a{
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: #777777;
+  border-bottom: 1px none #F6364D;
+}
+
+.footer p a::after{
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: 1px solid #F6364D;
+  width: 0;
+  left: 0;
+  max-width: 272px;
+  -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+}
+
+.footer p a:hover:after{
+  width: 100%;
+}
+
+.footer p a:hover{
+  color: #F6364D;
+}
+
+
+/*Responsiveness
+=============*/
+@media screen and (max-width: 1200px){
+  header div{
+    max-width: 970px;
+  }
+
+  hr{
+    max-width: 940px;
+  }
+}
+
+@media screen and (max-width: 990px){
+  header div{
+    max-width: 750px;
+  }
+  header{
+    padding-top: 25px;
+  }
+
+  hr{
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 720px){
+  div.img-container{
+    height: 80px;
+  }
+
+  hr{
+    max-width: 90%;
+  }
+}
