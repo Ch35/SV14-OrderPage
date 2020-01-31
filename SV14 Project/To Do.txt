@@ -1,0 +1,10 @@
+Design order web
+	Spare Parts Page/Order Page
+	Popup for order form and extra order info
+	Terms and conditions
+
+Design order mobile
+
+Automatically calculates order + 30% deposit
+Create functional cart
+Use PHP to send email of order
