@@ -7,6 +7,7 @@
   <title>Order - SV14</title>
   <link rel="stylesheet" href="styles.css" type="text/css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script type="text/javascript" src="js/menuOverlay.js"></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
       <a href="http://sv14.org/" class="logo">
         <img src="logo.png" alt="SV14 Logo" class="logo">
       </a>
-      <span class="menu">MENU</span>
+      <span class="menu" onclick="openNav()">MENU</span>
     </div>
   </header>
 
@@ -25,6 +26,32 @@
     <img src="img-header.png" alt="Image Header" class="img-header">
     <div><strong>order.</strong></div>
   </div>
+
+  <!--Menu Overlay-->
+  <div id="myNav" class="overlay">
+    <div class="overlay-container">
+      <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">CLOSE</a>
+
+      <div class="overlay-content">
+        <a href="http://sv14.org/">home.</a> <br>
+        <a href="http://sv14.org/about/">about.</a> <br>
+        <a href="http://sv14.org/design/">design.</a> <br>
+        <a href="">order</a> <br>
+        <a href="http://sv14.org/donate/">donate.</a> <br>
+        <a href="http://sv14.org/map/">map.</a> <br>
+        <a href="http://sv14.org/news/">news.</a> <br>
+        <a href="http://sv14.org/gallery/">gallery.</a> <br>
+        <a href="http://sv14.org/project-support/">project support.</a> <br>
+        <a href="http://sv14.org/contact/">contact.</a>
+      </div>
+
+      <div class="overlay-footer">
+        <hr>
+        <p>© Copyright 2017. <a href="http://www.nautique.co.za">Nautique Marketing Communications.</a> All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+
 
   <!--Body Content-->
 

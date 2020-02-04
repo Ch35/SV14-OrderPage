@@ -69,6 +69,100 @@ div.img-container div{
 =============*/
 
 
+/*Menu-Overlay
+=============*/
+.overlay{
+  background-color: #222222;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+.overlay a:hover:after{
+  width: 100%;
+}
+.overlay a, p{
+  position: relative;
+  font-family: Lekton;
+  color: white;
+  font-size: 32px;
+  text-decoration: none;
+  color: white;
+}
+.overlay .closeBtn{
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 45px;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.overlay-container{
+  position: relative;
+  margin: 0 auto;
+  left: 10px;
+  max-width: 1140px;
+}
+
+.overlay-content{
+  position: relative;
+  top: 0%;
+  width: 100%;
+  text-align: left;
+  margin-top: 30px;
+}
+.overlay-content a::after{
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: 2px solid white;
+  width: 0;
+  left: 0;
+  max-width: 272px;
+  -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+}
+
+.overlay-footer{
+  position: relative;
+  text-align: left;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 150px 0 40px;
+}
+.overlay-footer a, p{
+  font-size: 15px;
+}
+.overlay-footer a:hover{
+  color: #838383;
+}
+.overlay-footer a::after{
+  content: "";
+  position: absolute;
+  display: block;
+  border-bottom: 2px solid #962D39;
+  width: 0;
+  left: 0;
+  max-width: 272px;
+  -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+}
+.overlay-footer a:hover:after{
+  width: 100%;
+}
+
+
+
 /*footer
 =============*/
 .footer{
@@ -82,7 +176,7 @@ div.img-container div{
 
 hr{
   max-width: 1140px;
-  border: 1px solid #EEEEEE;
+  border: 0.5px solid #EEEEEE;
   border-left: none;
   border-right: none;
 }
@@ -93,9 +187,7 @@ hr{
   padding: 50px 0px 40px;
 }
 
-.footer .fab{
-  color: black;
-}
+.footer .fab{color: black;}
 
 .footer p{
   font-family: Lekton;
@@ -123,46 +215,45 @@ hr{
         transition: all 0.2s ease-in-out;
 }
 
-.footer p a:hover:after{
-  width: 100%;
-}
+.footer p a:hover:after{width: 100%;}
 
-.footer p a:hover{
-  color: #F6364D;
-}
+.footer p a:hover{color: #F6364D;}
 
 
 /*Responsiveness
 =============*/
 @media screen and (max-width: 1200px){
-  header div{
-    max-width: 970px;
-  }
+  header div{max-width: 970px;}
 
-  hr{
-    max-width: 940px;
-  }
+  hr{max-width: 940px;}
+
+  .overlay-container{max-width: 940px;}
 }
 
 @media screen and (max-width: 990px){
-  header div{
-    max-width: 750px;
-  }
-  header{
-    padding-top: 25px;
-  }
+  header div{max-width: 750px;}
 
-  hr{
-    max-width: 720px;
-  }
+  header{padding-top: 25px;}
+
+  hr{max-width: 720px;}
+
+  .overlay-container{max-width: 720px;}
 }
 
 @media screen and (max-width: 720px){
-  div.img-container{
-    height: 80px;
-  }
+  div.img-container{height: 80px;}
 
-  hr{
-    max-width: 90%;
+  hr{max-width: 90%;}
+
+  .overlay-container{max-width: 90%;}
+
+  .overlay a{font-size: 20px;}
+
+  .overlay-footer a, p{font-size: 15px;}
+
+  .overlay .closebtn{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
