@@ -1,11 +1,16 @@
 //Open
 function openNav(){
   document.getElementById("myNav").style.display = "block";
-  document.getElementById("myNav").style.opacity = "1";
+
+  setTimeout(function() {
+    document.getElementById("myNav").style.opacity = "1";
+  }, 1);
 }
 
 //Close
 function closeNav(){
   document.getElementById("myNav").style.opacity = "0";
-  document.getElementById("myNav").style.display = "none";
+  setTimeout(function() {
+    document.getElementById("myNav").style.display = "none";
+  }, 500);
 }
