@@ -7,6 +7,7 @@
   <title>Order - SV14</title>
   <link rel="stylesheet" href="styles.css" type="text/css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/menuOverlay.js"></script>
 </head>
 
@@ -54,8 +55,30 @@
 
 
   <!--Body Content-->
+  <div class="wrapper">
+    <div class="Boat-Container">
+      <img src="Parts/Spinnaker.png" alt="" class="Spinnaker">
+      <img src="Parts/Racing Spinnaker.png" alt="" class="Racing-Spinnaker">
+      <img src="Parts/Standard Jib.png" alt="" class="Standard-Jib">
+      <img src="Parts/Racing Jib.png" alt="" class="Racing-Jib">
+      <img src="Parts/Standard MainSail.png" alt="" class="Standard-MainSail">
+      <img src="Parts/Racing MainSail.png" alt="" class="Racing-MainSail">
+      <img src="Parts/Boat.png" alt="" class="Boat">
+    </div>
 
-
+    <div class="Customize-Container">
+      <h1>Customize.</h1>
+      <br>
+      <br>
+      <span id="Spinnaker" onclick="togglePart(this.id)">Nylon Spinnaker & Deck Gear <br> <strong>$500</strong></span>
+      <br>
+      <span id="Racing-MainSail" onclick="togglePart(this.id)">GP Racing Mainsail <br> <strong>$670</strong></span>
+      <br>
+      <span id="Racing-Jib" onclick="togglePart(this.id)">GP Racing Jib <br> <strong>$215</strong></span>
+      <br>
+      <span id="Racing-Spinnaker" onclick="togglePart(this.id)">GP Racing Asymmetric Spinnaker <br> <strong>$315</strong></span>
+    </div>
+  </div>
 
 
   <!--Footer-->

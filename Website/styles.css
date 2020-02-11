@@ -17,17 +17,14 @@ header{
   padding: 40px 0px;
   margin: auto;
 }
-
 header div{
   max-width: 1140px;
   margin: auto;
   padding: 10px;
 }
-
 header .logo{
   width: 200px;
 }
-
 header .menu{
   display: inline;
   font-family: 'Lekton', sans-serif;
@@ -36,6 +33,7 @@ header .menu{
   padding: 13px 15px;
   float: right;
 }
+/*=============*/
 
 
 /*Image Header
@@ -46,11 +44,9 @@ div.img-container{
   height: 188px;
   text-align: center;
 }
-
 div.img-container img{
   margin-top: -30%;
 }
-
 div.img-container div{
   position: absolute;
   font-size: 28px;
@@ -59,15 +55,61 @@ div.img-container div{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-  div.img-container img{
-    margin-top: 5;
-  }
-
+div.img-container img{
+  margin-top: 5;
+}
+/*=============*/
 
 /*Body
 =============*/
+.wrapper{
+  position: relative;
+  margin: 0 auto;
+  padding-top: 100px;
+  left: 0px;
+  max-width: 1140px;
+  height: 100%;
+}
 
+/*Customization*/
+.Boat-Container{
+  position: relative;
+  height: 615.77px;
+  left: 100px;
+  width: 50%;
+}
+.wrapper img{
+  width: 100%;
+  position: absolute;
+}
+/*Boat Parts*/
+.Spinnaker, .Racing-Spinnaker, .Racing-Jib, .Racing-MainSail{
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+          transition: opacity 0.5s ease-in-out;
+}
+
+.Customize-Container{
+  position: absolute;
+  top: 150px;
+  right: 100px;
+  text-align: center;
+}
+h1{
+  font-size: 25px;
+  color: #F6364D;
+}
+.wrapper span{
+  display: block;
+  color: #777777;
+  font-family: 'Lekton', sans-serif;
+  cursor: pointer;
+}
+.wrapper span:hover{
+  color: #F6364D !important;
+}
+/*Customization*/
+/*=============*/
 
 
 /*Menu-Overlay
@@ -79,15 +121,12 @@ div.img-container div{
   opacity: 0;
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   top: 0;
-  overflow: hidden; /*May cause errors*/
+  overflow: hidden;
   -webkit-transition: opacity 0.5s ease-in-out;
         transition: opacity 0.5s ease-in-out;
-}
-.overlay a:hover:after{
-  width: 100%;
 }
 .overlay a, p{
   position: relative;
@@ -134,6 +173,9 @@ div.img-container div{
   -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
 }
+.overlay-content a:hover:after{
+  width: 100%;
+}
 
 .overlay-footer{
   position: sticky;
@@ -163,13 +205,13 @@ div.img-container div{
 .overlay-footer a:hover:after{
   width: 100%;
 }
-
+/*=============*/
 
 
 /*footer
 =============*/
 .footer{
-  position: fixed;
+  position: static;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -189,7 +231,6 @@ hr{
   margin: 3;
   padding: 50px 0px 40px;
 }
-
 .footer .fab{color: black;}
 
 .footer p{
@@ -197,7 +238,6 @@ hr{
   color: #777777;
   font-size: 15px;
 }
-
 .footer p a{
   text-align: center;
   position: relative;
@@ -205,7 +245,6 @@ hr{
   color: #777777;
   border-bottom: 1px none #F6364D;
 }
-
 .footer p a::after{
   content: "";
   position: absolute;
@@ -221,6 +260,7 @@ hr{
 .footer p a:hover:after{width: 100%;}
 
 .footer p a:hover{color: #F6364D;}
+/*=============*/
 
 
 /*Responsiveness
@@ -231,6 +271,8 @@ hr{
   hr{max-width: 940px;}
 
   .overlay-container{max-width: 940px;}
+
+  .wrapper{max-width: 940px}
 }
 
 @media screen and (max-width: 990px){
@@ -241,6 +283,12 @@ hr{
   hr{max-width: 720px;}
 
   .overlay-container{max-width: 720px;}
+
+  .wrapper{max-width: 720px;}
+
+  .Customize-Container{right: 50px;}
+
+  .Boat-Container{left: 5px;}
 }
 
 @media screen and (max-width: 720px){
@@ -249,6 +297,8 @@ hr{
   hr{max-width: 90%;}
 
   .overlay-container{max-width: 90%;}
+
+  .wrapper{max-width: 90%;}
 
   .overlay a{font-size: 20px;}
 
@@ -260,3 +310,4 @@ hr{
     right: 35px;
   }
 }
+/*=============*/
