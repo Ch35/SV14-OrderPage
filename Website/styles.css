@@ -60,7 +60,7 @@ div.img-container img{
 }
 /*=============*/
 
-/*Body
+/*Body_Content
 =============*/
 .wrapper{
   position: relative;
@@ -72,6 +72,7 @@ div.img-container img{
 }
 
 /*Customization*/
+/*=============*/
 .Boat-Container{
   position: relative;
   height: 615.77px;
@@ -108,7 +109,53 @@ h1{
 .wrapper span:hover{
   color: #F6364D !important;
 }
-/*Customization*/
+/*=============*/
+
+.disclaimer{
+  color: #777777;
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.7;
+}
+.red{
+  border: 0.5px solid #F6364D;
+  opacity: 0.5;
+}
+
+#Logos{
+  position: relative;
+  top: 15px;
+  width: 50%;
+}
+.Specifications-Header{
+  position: relative;
+}
+.Specifications-Header h1{
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.Specifications{
+  padding-top: 20px;
+}
+#Construction, #Mast, #Gear{
+  width: 300px;
+  display: inline-block;
+  margin-left: 5%;
+}
+#Mast{
+  vertical-align: top;
+}
+.Specifications p{
+  color: black;
+  white-space: pre-line;
+  font-size: 20px;
+  line-height: 1;
+}
+.Specifications strong{
+  color: black;
+}
 /*=============*/
 
 
@@ -272,7 +319,9 @@ hr{
 
   .overlay-container{max-width: 940px;}
 
-  .wrapper{max-width: 940px}
+  .wrapper{max-width: 940px;}
+
+  .Boat-Container{max-height: 508px;}
 }
 
 @media screen and (max-width: 990px){
@@ -288,7 +337,12 @@ hr{
 
   .Customize-Container{right: 50px;}
 
-  .Boat-Container{left: 5px;}
+  .Boat-Container{
+    left: 5px;
+    max-height: 425px;
+  }
+
+  .Specifications h1{bottom: 0px;}
 }
 
 @media screen and (max-width: 720px){
