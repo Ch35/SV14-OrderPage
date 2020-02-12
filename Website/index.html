@@ -22,14 +22,15 @@
     </div>
   </header>
 
-  <!--Order Header-->
+  <!--Page Header-->
   <div class="img-container">
     <img src="img-header.png" alt="Image Header" class="img-header">
     <div><strong>order.</strong></div>
   </div>
 
+
   <!--Menu Overlay-->
-  <div id="myNav" class="overlay">
+  <div id="menuOverlay" class="overlay">
     <div class="overlay-container">
       <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">CLOSE</a>
 
@@ -56,114 +57,150 @@
 
   <!--Body Content-->
   <div class="wrapper">
-    <div class="Boat-Container">
-      <img src="Parts/Spinnaker.png" alt="" class="Spinnaker">
-      <img src="Parts/Racing Spinnaker.png" alt="" class="Racing-Spinnaker">
-      <img src="Parts/Standard Jib.png" alt="" class="Standard-Jib">
-      <img src="Parts/Racing Jib.png" alt="" class="Racing-Jib">
-      <img src="Parts/Standard MainSail.png" alt="" class="Standard-MainSail">
-      <img src="Parts/Racing MainSail.png" alt="" class="Racing-MainSail">
-      <img src="Parts/Boat.png" alt="" class="Boat">
-    </div>
+    <!--Customization-->
+    <div class="Customize-Wrapper">
+      <div class="Boat-Container">
+        <img src="Parts/Spinnaker.png" alt="" class="Spinnaker">
+        <img src="Parts/Racing Spinnaker.png" alt="" class="Racing-Spinnaker">
+        <img src="Parts/Standard Jib.png" alt="" class="Standard-Jib">
+        <img src="Parts/Racing Jib.png" alt="" class="Racing-Jib">
+        <img src="Parts/Standard MainSail.png" alt="" class="Standard-MainSail">
+        <img src="Parts/Racing MainSail.png" alt="" class="Racing-MainSail">
+        <img src="Parts/Boat.png" alt="" class="Boat">
+      </div>
 
-    <div class="Customize-Container">
-      <h1>Customize.</h1>
-      <br>
-      <br>
-      <span id="Spinnaker" onclick="togglePart(this.id)">Nylon Spinnaker & Deck Gear <br> <strong>$500</strong></span>
-      <br>
-      <span id="Racing-MainSail" onclick="togglePart(this.id)">GP Racing Mainsail <br> <strong>$670</strong></span>
-      <br>
-      <span id="Racing-Jib" onclick="togglePart(this.id)">GP Racing Jib <br> <strong>$215</strong></span>
-      <br>
-      <span id="Racing-Spinnaker" onclick="togglePart(this.id)">GP Racing Asymmetric Spinnaker <br> <strong>$315</strong></span>
+      <div class="Customize-Container">
+        <h1>Customize.</h1>
+        <br>
+        <br>
+        <span id="Spinnaker" onclick="togglePart(this.id)">Nylon Spinnaker & Deck Gear <br> <strong>$500</strong></span>
+        <br>
+        <span id="Racing-MainSail" onclick="togglePart(this.id)">GP Racing Mainsail <br> <strong>$670</strong></span>
+        <br>
+        <span id="Racing-Jib" onclick="togglePart(this.id)">GP Racing Jib <br> <strong>$215</strong></span>
+        <br>
+        <span id="Racing-Spinnaker" onclick="togglePart(this.id)">GP Racing Asymmetric Spinnaker <br> <strong>$315</strong></span>
+      </div>
     </div>
 
     <p class="disclaimer">Graphical Representation Only - Actual Products may Differ</p>
     <hr class="red">
+    <!--Customization-->
 
-    <div class="Specifications-Header">
-      <img src="CombinedLogos.png" alt="" id="Logos">
-      <h1>Specifications.</h1>
-    </div>
-
+    <!--Specifications-->
     <div class="Specifications">
-      <div id="Construction">
-        <p><strong>CONSTRUCTION</strong></p>
-        <hr>
-        <p>HULL:
-          Vacuum infused sandwich using PVC core, E‐glass and isophthalic polyester resin.
-          Hull Finish: White isophthalic gelcoat.
-          Internal Reinforcing: Solid glass structure, creating 6 flotation compartments.
-
-          DECK:
-          Sandwich construction using PVC core, E‐glass and isophthalic resin.
-          Non‐skid pattern used in strategic deck areas. E‐plates used as backing plates for deck hardware.
-
-          KEEL:
-          1.20 meter deep lifting keel T-shaped with low drag bulb fabricated out of resin/lead‐shot, encapsulated in GRP shell.
-          Fin is resin infused using E‐glass/carbon and PVC core.
-
-          RUDDERS:
-          Twin rudder arrangement. Blades are resin infused E‐glass/carbon and PVC core.
-        </p>
+      <div class="Specifications-Header">
+        <img src="CombinedLogos.png" alt="" id="Logos">
+        <h1 onclick="toggleSpecifications()">Specifications.</h1>
       </div>
 
-      <div id="Mast">
-        <p><strong>MAST AND RIGGING</strong></p>
-        <hr>
-        <p>SPARS:
-          Fareast aluminum mast with nylon mast top, heel, 1 spreader set and SS gooseneck fitting.
-          Integral bolt‐rope extrusion.
-          Fareast aluminum boom with fittings for outhaul, tack, vang, mainsheet and reef.
-          Retractable bowsprit, alloy tubing by Fareast.
+      <div class="Specifications-Container">
+        <div id="Specifications" class="Specifications-Content">
+          <div class="Measurements">
+            <p><strong>Design - Simonis Voogd</strong></p>
+            <p>(M = Main Sail) (J = Jib) (A = Asymmetric Spinnaker)</p>
+            <table>
+              <tr><td>Length Overall</td><td class="right">4,39 m</td></tr>
+              <tr><td>Length Waterline</td><td class="right">4,36 m</td></tr>
+              <tr><td>Beam</td><td class="right">1,59 m</td></tr>
+              <tr><td>Draft(keel down)</td><td class="right">1,20 m</td></tr>
+            </table>
 
-          STANDING RIGGING:
-          3,0 mm SS 1x19 forestay and caps.
+            <table>
+              <tr><td>Displacement(approx)</td><td class="right">300 kg</td></tr>
+              <tr><td>Sail Area Upwind(M+J)</td><td class="right">9,4 m<sup>2</sup></td></tr>
+              <tr><td>Sail Area Downwin(M+A)</td><td class="right">16,3 m<sup>2</sup></td></tr>
+              <tr><td>CE Certification</td><td class="right">CAT D</td></tr>
+            </table>
 
-          RUNNING RIGGING:
-          1 Mainsail halyard
-          1 Jib halyard
-          1 Spinnaker halyard (optional)
-          1 Jib Sheet (continuous)
-          1 Main sheet (4:1)
-          1 Vang purchase (4:1)
-          1 Outhaul line
-          1 Cunningham line
-          1 Traveler control line
-          1 Pole extension line.
-          1 Reef line
-        </p>
-      </div>
+            <table>
+              <tr><td>I</td><td class="right">3,68 m</td></tr>
+              <tr><td>J</td><td class="right">1,37 m<sup>2</sup></td></tr>
+              <tr><td>P</td><td class="right">4,65 m<sup>2</sup></td></tr>
+              <tr><td>E</td><td class="right">2,15 m</td></tr>
+            </table>
+          </div>
 
-      <div id="Gear">
-        <p><strong>GEAR</strong></p>
-        <hr>
-        <p>DECK EQUIPMENT:
-          1 tiller yoke on centerline connected to twin rudders fitted on cockpit sole in front of fixed seat.
+          <div class="Details">
+            <div id="Construction">
+              <p><strong>CONSTRUCTION</strong></p>
+              <hr>
+              <p>HULL:
+                Vacuum infused sandwich using PVC core, E‐glass and isophthalic polyester resin.
+                Hull Finish: White isophthalic gelcoat.
+                Internal Reinforcing: Solid glass structure, creating 6 flotation compartments.
 
-          Mainsail blocks (4).
-          Jib blocks (2) with cleats.
-          Turning blocks (2) for Jib sheet.
-          Pad eyes for mainsheet bridles (4).
-          Cleat for pole extension.
+                DECK:
+                Sandwich construction using PVC core, E‐glass and isophthalic resin.
+                Non‐skid pattern used in strategic deck areas. E‐plates used as backing plates for deck hardware.
 
-          SEATING:
-          2 GRP bucket seats(1 Skipper and 1 crew model), specifically designed for the SV14 fitted on cockpit floor with quick release knobs bolts.
+                KEEL:
+                1.20 meter deep lifting keel T-shaped with low drag bulb fabricated out of resin/lead‐shot, encapsulated in GRP shell.
+                Fin is resin infused using E‐glass/carbon and PVC core.
 
-          SAILS:
-          Dacron Mainsail with 1 reef.
-          Dacron Jib with window.
+                RUDDERS:
+                Twin rudder arrangement. Blades are resin infused E‐glass/carbon and PVC core.
+              </p>
+            </div>
 
-          MISCELLANEOUS:
-          CE Owner’s manual
+            <div id="Mast">
+              <p><strong>MAST AND RIGGING</strong></p>
+              <hr>
+              <p>SPARS:
+                Fareast aluminum mast with nylon mast top, heel, 1 spreader set and SS gooseneck fitting.
+                Integral bolt‐rope extrusion.
+                Fareast aluminum boom with fittings for outhaul, tack, vang, mainsheet and reef.
+                Retractable bowsprit, alloy tubing by Fareast.
 
-          <strong>* Asymmetric  Spinnaker  is  not part of the standard specification.</strong>
-        </p>
+                STANDING RIGGING:
+                3,0 mm SS 1x19 forestay and caps.
+
+                RUNNING RIGGING:
+                1 Mainsail halyard
+                1 Jib halyard
+                1 Spinnaker halyard (optional)
+                1 Jib Sheet (continuous)
+                1 Main sheet (4:1)
+                1 Vang purchase (4:1)
+                1 Outhaul line
+                1 Cunningham line
+                1 Traveler control line
+                1 Pole extension line.
+                1 Reef line
+              </p>
+            </div>
+
+            <div id="Gear">
+              <p><strong>GEAR</strong></p>
+              <hr>
+              <p>DECK EQUIPMENT:
+                1 tiller yoke on centerline connected to twin rudders fitted on cockpit sole in front of fixed seat.
+
+                Mainsail blocks (4).
+                Jib blocks (2) with cleats.
+                Turning blocks (2) for Jib sheet.
+                Pad eyes for mainsheet bridles (4).
+                Cleat for pole extension.
+
+                SEATING:
+                2 GRP bucket seats(1 Skipper and 1 crew model), specifically designed for the SV14 fitted on cockpit floor with quick release knobs bolts.
+
+                SAILS:
+                Dacron Mainsail with 1 reef.
+                Dacron Jib with window.
+
+                MISCELLANEOUS:
+                CE Owner’s manual
+
+                <strong>* Asymmetric  Spinnaker  is  not part of the standard specification.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <!--Specifications-->
   </div>
-
 
   <!--Footer-->
   <footer>

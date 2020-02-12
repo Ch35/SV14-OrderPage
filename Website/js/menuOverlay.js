@@ -1,17 +1,32 @@
+function toggleSpecifications(){
+  var div = document.getElementById("Specifications");
+
+  if(div.style.maxHeight == "100%"){
+    div.style.opacity = "0";
+    div.style.maxHeight = "0";
+  } else{
+    setTimeout(function() {
+      div.style.maxHeight = "100%";
+      div.style.opacity = "1";
+    }, 500);
+  }
+}
+
 //Open
 function openNav(){
-  document.getElementById("myNav").style.display = "block";
+  document.getElementById("menuOverlay").style.display = "block";
 
   setTimeout(function() {
-    document.getElementById("myNav").style.opacity = "1";
+    document.getElementById("menuOverlay").style.opacity = "1";
   }, 1);
 }
 
 //Close
 function closeNav(){
-  document.getElementById("myNav").style.opacity = "0";
+  document.getElementById("menuOverlay").style.opacity = "0";
+
   setTimeout(function() {
-    document.getElementById("myNav").style.display = "none";
+    document.getElementById("menuOverlay").style.display = "none";
   }, 500);
 }
 
