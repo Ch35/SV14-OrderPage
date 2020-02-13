@@ -88,7 +88,7 @@ div.img-container img{
   position: absolute;
 }
 /*Boat Parts*/
-.Spinnaker, .Racing-Spinnaker, .Racing-Jib, .Racing-MainSail{
+.Spinnaker, .Racing-Spinnaker, .Racing-Jib, .Racing-MainSail, .Canting-Seats{
   opacity: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
           transition: opacity 0.5s ease-in-out;
@@ -133,6 +133,7 @@ h1{
 }
 .Specifications-Header h1{
   position: absolute;
+  cursor: pointer;
   right: 0;
   top: 20px;
 }
