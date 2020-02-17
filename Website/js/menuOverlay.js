@@ -1,18 +1,12 @@
+//Toggle Specifications
 function toggleSpecifications(){
   var div = document.getElementById("Specifications");
 
-  if(div.style.maxHeight == "100%"){
-    div.style.opacity = "0";
-    div.style.maxHeight = "0";
-  } else{
-    setTimeout(function() {
-      div.style.maxHeight = "100%";
-      div.style.opacity = "1";
-    }, 500);
-  }
+  //Togles style
+  div.classList.toggle("Specifications-Content");
 }
 
-//Open
+//Open Menu Overlay
 function openNav(){
   document.getElementById("menuOverlay").style.display = "block";
 
@@ -20,8 +14,7 @@ function openNav(){
     document.getElementById("menuOverlay").style.opacity = "1";
   }, 1);
 }
-
-//Close
+//Close Menu Overlay
 function closeNav(){
   document.getElementById("menuOverlay").style.opacity = "0";
 
@@ -41,5 +34,14 @@ function togglePart(partClass){
   } else{
     part.style.opacity = "1";
     text.style.color = "#F6364D";
+  }
+
+  //If selected is Spinnaker
+  if(partClass == "Spinnaker"){
+    document.getElementsByClassName("Racing-Spinnaker")[0].style.opacity = "0";
+    document.getElementById("Racing-Spinnaker").style.color = "#777777";
+  } else if(partClass == "Racing-Spinnaker"){
+    document.getElementsByClassName("Spinnaker")[0].style.opacity = "0";
+    document.getElementById("Spinnaker").style.color = "#777777";
   }
 }

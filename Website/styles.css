@@ -38,16 +38,16 @@ header .menu{
 
 /*Image Header
 =============*/
-div.img-container{
+.img-container{
   overflow: hidden;
   position: relative;
   height: 188px;
   text-align: center;
 }
-div.img-container img{
+.img-container img{
   margin-top: -30%;
 }
-div.img-container div{
+.img-container div{
   position: absolute;
   font-size: 28px;
   color: white;
@@ -55,7 +55,7 @@ div.img-container div{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-div.img-container img{
+.img-container img{
   margin-top: 5;
 }
 /*=============*/
@@ -65,7 +65,7 @@ div.img-container img{
 .wrapper{
   position: relative;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 50px;
   left: 0px;
   max-width: 1140px;
   height: 100%;
@@ -74,45 +74,54 @@ div.img-container img{
 /*Customization*/
 /*=============*/
 .Customize-Wrapper{
-  max-width: auto;
-  max-height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.Boat-Wrapper{
+  width: 50%;
+  height: auto;
 }
 .Boat-Container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   position: relative;
-  height: 615.77px;
+  height: 100%;
+}
+.Boat-Container img{
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
 
-  width: 50%;
-}
-.wrapper img{
-  width: 100%;
-  position: absolute;
-}
 /*Boat Parts*/
 .Spinnaker, .Racing-Spinnaker, .Racing-Jib, .Racing-MainSail, .Canting-Seats{
   opacity: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
           transition: opacity 0.5s ease-in-out;
 }
+.Spinnaker, .Racing-Spinnaker{
+  z-index: -1;
+}
 
 .Customize-Container{
-  position: absolute;
-  top: 150px;
-  right: 100px;
-
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 h1{
   font-size: 25px;
   color: #F6364D;
 }
-.wrapper span{
+.Customize-Container span{
   display: block;
   color: #777777;
   font-family: 'Lekton', sans-serif;
   cursor: pointer;
 }
-.wrapper span:hover{
-  color: #F6364D !important;
+.Customize-Container span:hover{
+  font-weight: bolder;
 }
 /*=============*/
 
@@ -128,33 +137,42 @@ h1{
 }
 
 .Specifications-Header{
-  position: relative;
+  display: flex;
+  align-items: center;
   padding-bottom: 20px;
 }
-.Specifications-Header h1{
-  position: absolute;
-  cursor: pointer;
-  right: 0;
-  top: 20px;
-}
-.Specifications-Header h1:hover{
-  color: gray;
-}
-#Logos{
+.Logos{
   position: relative;
   top: 15px;
   width: 50%;
+  height: auto;
+}
+.Specifications-Header h1{
+  position: relative;
+  width: 50%;
+  height: auto;
+  top: 15px;
+  text-align: right;
+  float: right;
+  cursor: pointer;
+}
+.Specifications-Header h1:hover{
+  color: gray;
 }
 .Specifications-Container{
   position: relative;
   height: auto;
 }
-.Specifications-Content{
+#Specifications{
   overflow: hidden;
-  max-height: 0;
+  height: 0;
   opacity: 0;
   -webkit-transition: all 1s ease;
         transition: all 1s ease;
+}
+.Specifications-Content{
+  height: auto !important;
+  opacity: 1 !important;
 }
 
 .Measurements p{
@@ -166,15 +184,15 @@ h1{
   font-size: 20px;
 }
  table{
-  width: 300px;
-  color: gray;
-  float: left;
-  margin-left: 5%;
-}
+   width: 300px;
+   color: gray;
+   float: left;
+   margin-left: 5%;
+ }
  th, td{
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
-}
+   padding: 8px;
+   border-bottom: 1px solid #ddd;
+ }
 .right{
   text-align: right;
 }
@@ -360,8 +378,6 @@ hr{
   header div{max-width: 970px;}
 
   hr, .overlay-container, .wrapper{max-width: 940px;}
-
-  .Boat-Container{max-height: 508px;}
 }
 
 @media screen and (max-width: 990px){
@@ -370,42 +386,28 @@ hr{
   header{padding-top: 25px;}
 
   hr, .overlay-container, .wrapper{max-width: 720px;}
-
-  .Customize-Container{right: 50px;}
-
-  .Boat-Container{
-    left: 5px;
-    max-height: 425px;
-  }
 }
 
 @media screen and (max-width: 720px){
   div.img-container{height: 80px;}
 
-  hr, .overlay-container, .wrapper{max-width: 90%;}
-  .wrapper{padding-top: 20px;}
-
-  .Boat-Container{
-    left: -2%;
-    top: 350px;
-    text-align: center;
-  }
-
-  .Customize-Container{
-    top: 0px;
-  }
-  .Customize-Wrapper{
-    padding-bottom: 35%;
-  }
-
   .overlay a{font-size: 20px;}
-
   .overlay-footer a, p{font-size: 15px;}
-
   .overlay .closebtn{
     font-size: 40px;
     top: 15px;
     right: 35px;
   }
+
+  hr, .overlay-container, .wrapper{max-width: 90%;}
+  .wrapper{padding-top: 10px;}
+
+  .Customize-Wrapper{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: flex-start;
+  }
+  .Boat-Wrapper{width: auto;}
+
+  .Specifications-Header h1{font-size: 20px}
 }
-/*=============*/

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order - SV14</title>
   <link rel="stylesheet" href="styles.css" type="text/css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -59,15 +60,17 @@
   <div class="wrapper">
     <!--Customization-->
     <div class="Customize-Wrapper">
-      <div class="Boat-Container">
-        <img src="Parts/Spinnaker.png" alt="" class="Spinnaker">
-        <img src="Parts/Racing Spinnaker.png" alt="" class="Racing-Spinnaker">
-        <img src="Parts/Standard Jib.png" alt="" class="Standard-Jib">
-        <img src="Parts/Racing Jib.png" alt="" class="Racing-Jib">
-        <img src="Parts/Standard MainSail.png" alt="" class="Standard-MainSail">
-        <img src="Parts/Racing MainSail.png" alt="" class="Racing-MainSail">
-        <img src="Parts/Boat.png" alt="" class="Boat">
-        <img src="Parts/Boat Canting.png" alt="" class="Canting-Seats">
+      <div class="Boat-Wrapper">
+        <div class="Boat-Container">
+          <img src="Parts/Spinnaker.png" alt="" class="Spinnaker">
+          <img src="Parts/Racing Spinnaker.png" alt="" class="Racing-Spinnaker">
+          <img src="Parts/Standard Jib.png" alt="" class="Standard-Jib">
+          <img src="Parts/Racing Jib.png" alt="" class="Racing-Jib">
+          <img src="Parts/Standard MainSail.png" alt="" class="Standard-MainSail">
+          <img src="Parts/Racing MainSail.png" alt="" class="Racing-MainSail">
+          <img src="Parts/Boat.png" alt="" class="Boat">
+          <img src="Parts/Boat Canting.png" alt="" class="Canting-Seats">
+        </div>
       </div>
 
       <div class="Customize-Container">
@@ -91,7 +94,9 @@
     <!--Specifications-->
     <div class="Specifications">
       <div class="Specifications-Header">
-        <img src="CombinedLogos.png" alt="" id="Logos">
+        <div class="Logos">
+          <img src="CombinedLogos.png" alt="">
+        </div>
         <h1 onclick="toggleSpecifications()">Specifications.</h1>
       </div>
 
@@ -201,6 +206,7 @@
       </div>
     </div>
 
+    <!--Order-->
     <div class="Order-Wrapper">
       <div class="Order-Header">
         <hr class="red">
