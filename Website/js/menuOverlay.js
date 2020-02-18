@@ -1,27 +1,38 @@
-//Toggle Specifications
-function toggleSpecifications(){
-  var div = document.getElementById("Specifications");
+//Open Overlay
+function openNav(overlayClass){
+  var overlay = document.getElementsByClassName(overlayClass)[0];
 
-  //Togles style
-  div.classList.toggle("Specifications-Content");
-}
-
-//Open Menu Overlay
-function openNav(){
-  document.getElementById("menuOverlay").style.display = "block";
+  document.getElementById("orderTitle").innerHTML = "Terms and Conditions";
+  document.getElementsByClassName("Terms-Content")[0].style.display = "block";
+  document.getElementsByTagName("Body")[0].style.overflowY = "hidden";
+  overlay.style.display = "block";
 
   setTimeout(function() {
-    document.getElementById("menuOverlay").style.opacity = "1";
+    overlay.style.opacity = "1";
+    overlay.style.height = "100%";
   }, 1);
 }
-//Close Menu Overlay
-function closeNav(){
-  document.getElementById("menuOverlay").style.opacity = "0";
+//Close Overlay
+function closeNav(overlayClass){
+  var overlay = document.getElementsByClassName(overlayClass)[0];
+
+  document.getElementsByTagName("Body")[0].style.overflowY = "scroll";
+  overlay.style.opacity = "0";
 
   setTimeout(function() {
-    document.getElementById("menuOverlay").style.display = "none";
+    overlay.style.height = "0";
+    overlay.style.display = "none";
   }, 500);
 }
+
+
+// Accept T&Cs
+var arParts = [];
+function AcceptTerms(){
+  document.getElementById("orderTitle").innerHTML = "Order";
+  document.getElementsByClassName("Terms-Content")[0].style.display = "none";
+}
+
 
 //Toggle Customization parts for boat
 function togglePart(partClass){
@@ -44,4 +55,13 @@ function togglePart(partClass){
     document.getElementsByClassName("Spinnaker")[0].style.opacity = "0";
     document.getElementById("Spinnaker").style.color = "#777777";
   }
+}
+
+
+//Toggle Specifications
+function toggleSpecifications(){
+  var div = document.getElementById("Specifications");
+
+  //Togles style
+  div.classList.toggle("Specifications-Content");
 }

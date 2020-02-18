@@ -19,11 +19,11 @@
       <a href="http://sv14.org/" class="logo">
         <img src="logo.png" alt="SV14 Logo" class="logo">
       </a>
-      <span class="menu" onclick="openNav()">MENU</span>
+      <span class="menu" id="overlay" onclick="openNav(this.id)">MENU</span>
     </div>
   </header>
 
-  <!--Page Header-->
+  <!--Image Header-->
   <div class="img-container">
     <img src="img-header.png" alt="Image Header" class="img-header">
     <div><strong>order.</strong></div>
@@ -33,7 +33,7 @@
   <!--Menu Overlay-->
   <div id="menuOverlay" class="overlay">
     <div class="overlay-container">
-      <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">CLOSE</a>
+      <a href="javascript:void(0)" class="closeBtn" id="overlay" onclick="closeNav(this.id)">CLOSE</a>
 
       <div class="overlay-content">
         <a href="http://sv14.org/">home.</a> <br>
@@ -55,6 +55,37 @@
     </div>
   </div>
 
+  <!--Order-->
+  <div class="Order-Wrapper">
+    <div class="wrapper">
+      <div class="Order-Header">
+        <h1 id="orderTitle">Terms and Conditions</h1>
+        <a href="javascript:void(0)" class="closeBtn" id="Order-Wrapper" onclick="closeNav(this.id)">CLOSE</a>
+      </div>
+      <div class="Terms-Content">
+        <p>All prices quoted are Ex. Work Shanghai (Shanghai Far East Boats Co., Ltd.) Shipping costs, duties, transfers and other local taxes including VAT if applicable are for the customer's account.
+
+        Orders are arranged with the assistance of SV14.org by completing the attached order form. SV14.org will forward this order form to both Fareast Boats and to the international Shipping company GAC Pindar to get a door to door shipping quote for either a 20' or 40' container depending on the number of boats to the requested destination.
+
+        Fareast will upon receipt of the order form give an indication of the current building progress and anticipated completion time of the order. This together with a Pro Forma invoice for payment of the building deposit will be sent back to the client. <strong>The current building deposit and required down payment is 30% of the purchase order as per order form.</strong>
+
+        Far East Boats will inform the client directly once the deposit is received and confirm a fixed delivery time based on the time the deposit has been received. This delivery time can then be used by the shipping agent to finalize their arrangement with client for the transport. GAC Pindar can from that moment liaise directly with the yard as to when pickup needs to be arranged and deal with the various stages of shipment and payments required by the client.
+
+        The balance of the order (70%) will need to be paid to Far East Boats before the container can leave the yard. Proof of completion and loading of the container can be supplied by the yard if requested.
+
+        Clients can make their own shipping arrangements if preferred, SV14.org merely supplies this as a service if needed. Companies will be supplied with invoices from: Far East Boats (for the SV14's), shipping and clearing agents equalling the total cost of the boats delivered on location and all duties and taxes paid as per local practice per destination.
+
+        Note that for cost effective shipping we highly recommend not to order less than 4 boats at a time to be shipped to any destination. Many of the shipment/transport costs are either fixed fees or cost per container which means that these costs  can be divided by either 4 (for a 20ft container) or 9 (for a 40ft one). Less than 4 boats in a 20ft container will significantly increase the cost per boat to have it delivered to your destination. For those who do not want to order up to 4 boats SV14.org will try to find additional buyers which would allow shipment to the same destination. However this is problematic from a logistics perspective which will result in extended delivery times. (The yard builds in batches of 10 boats and ships in batches of either 4 or 8). This means that individual orders need to be grouped together for building as well as shipping to meet the advertised prices.
+
+        As this is a direct “OEM to End User” selling model, there are no agents or importers involved. The advantage is the reduced overall cost. The disadvantage is that specific fabricated spares also need to be obtained directly from the yard. SV14.org can assist with obtaining spare parts if needed. Alternatively clubs/organizations/users can contact Fareast Boats directly to order parts and have them shipped out. Transport costs are for the end user’s account as are the costs for the parts if needed for replacement because of damage or due to wear and tear. Any items which would need replacement under warranty will be assessed first by SV14.org and the yard and dealt with on a case by case basis. If found to be a valid warranty claim, the yard will replace the parts at no cost if they can’t be repaired. Shipping costs to and from the yard if needed is in all events for the client’s account as all purchases and replacements are ex works Shanghai.
+
+        The SV14.org project is a non profit effort driven by SV14.org and Far East Boats. All parties entering into an agreement with Far East Boats to supply SV14's will do so on the clear understanding that there is a limited liability on warranty by the yard to only replace and repair on a basis of Ex Works Shanghai. The SV14 complies fully with CE requirements, carries a CE certification and conforms to the applicable ISO standard, any different legislation requirements which may be applicable have to by fulfilled by the buyer/user. In this sales model the “End User” becomes the importer and as such is the responsible party to carry any warranty requirements which may be in place to comply with local legislation. This arrangement is not put in place to absolve Far East Boats from any responsibility it is merely the model we like to follow in order to deliver the boats at the lowest cost without defaulting on the many different laws and regulations we otherwise have to deal with and are not considered in the selling price of the boats.
+        </p>
+        <span class="btn" onclick="AcceptTerms()">Accept</span>
+        <span class="btn right" id="Order-Wrapper" onclick="closeNav(this.id)">Decline</span>
+      </div>
+    </div>
+  </div>
 
   <!--Body Content-->
   <div class="wrapper">
@@ -86,6 +117,9 @@
         <span id="Racing-Spinnaker" onclick="togglePart(this.id)">GP Racing Asymmetric Spinnaker <br> <strong>$315</strong></span>
         <br>
         <span id="Canting-Seats" onclick="togglePart(this.id)">Tilting mechanism(Complete Kit) <br> <strong>$2900</strong></span>
+        <br>
+        <br>
+        <span id="Order-Wrapper" onclick="openNav(this.id)">Order</span>
       </div>
     </div>
     <p class="disclaimer">Graphical Representation Only - Actual Products may Differ</p>
@@ -203,14 +237,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!--Order-->
-    <div class="Order-Wrapper">
-      <div class="Order-Header">
-        <hr class="red">
-        <h1>Order List.</h1>
       </div>
     </div>
   </div>
