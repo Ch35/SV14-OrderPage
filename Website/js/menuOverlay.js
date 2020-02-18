@@ -4,6 +4,7 @@ function openNav(overlayClass){
 
   document.getElementById("orderTitle").innerHTML = "Terms and Conditions";
   document.getElementsByClassName("Terms-Content")[0].style.display = "block";
+  document.getElementsByClassName("Order-Content")[0].style.display = "none";
   document.getElementsByTagName("Body")[0].style.overflowY = "hidden";
   overlay.style.display = "block";
 
@@ -31,6 +32,7 @@ var arParts = [];
 function AcceptTerms(){
   document.getElementById("orderTitle").innerHTML = "Order";
   document.getElementsByClassName("Terms-Content")[0].style.display = "none";
+  document.getElementsByClassName("Order-Content")[0].style.display = "block";
 }
 
 

@@ -187,13 +187,13 @@ h1{
   color: #666666;
   font-size: 20px;
 }
- table{
+.Measurements table{
    width: 300px;
    color: gray;
    float: left;
    margin-left: 5%;
  }
- th, td{
+.Measurements th, td{
    padding: 8px;
    border-bottom: 1px solid #ddd;
  }
@@ -224,7 +224,7 @@ h1{
 }
 /*=============*/
 
-/*T&Cs Overlay
+/*T&Cs and Order Overlay
 ==============*/
 .Order-Wrapper{
   background-color: #222222;
@@ -290,6 +290,43 @@ h1{
 }
 .Terms-Content .right{
   float: right;
+}
+
+.Order-Content{
+  height: 88%;
+  display: none;
+  overflow-y: scroll;
+}
+.OrderOption{
+  font-size: 20px;
+  font-weight: bold;
+}
+.Order-Content table{
+  color: white;
+  table-layout: fixed;
+  text-align: left;
+}
+.Order-Content td{
+  width: 50%;
+  border: none;
+}
+input[type=number]{
+  width: 50px;
+  border: 1px solid #222222;
+  color: white;
+  background-color: #222222;
+  border-radius: 3px;
+}
+.total{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.total p{
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px;
+  margin: 0;
 }
 /*==============*/
 
