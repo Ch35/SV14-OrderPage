@@ -82,49 +82,65 @@
 
         The SV14.org project is a non profit effort driven by SV14.org and Far East Boats. All parties entering into an agreement with Far East Boats to supply SV14's will do so on the clear understanding that there is a limited liability on warranty by the yard to only replace and repair on a basis of Ex Works Shanghai. The SV14 complies fully with CE requirements, carries a CE certification and conforms to the applicable ISO standard, any different legislation requirements which may be applicable have to by fulfilled by the buyer/user. In this sales model the “End User” becomes the importer and as such is the responsible party to carry any warranty requirements which may be in place to comply with local legislation. This arrangement is not put in place to absolve Far East Boats from any responsibility it is merely the model we like to follow in order to deliver the boats at the lowest cost without defaulting on the many different laws and regulations we otherwise have to deal with and are not considered in the selling price of the boats.
         </p>
-        <span class="btn" onclick="AcceptTerms()">Accept</span>
-        <span class="btn right" id="Order-Wrapper" onclick="closeNav(this.id)">Decline</span>
-        <br><br>
+        <div class="btnsWrapper">
+          <span class="btn" onclick="AcceptTerms()">Accept</span>
+          <span class="btn right" id="Order-Wrapper" onclick="closeNav(this.id)">Decline</span>
+        </div>
+        <br>
       </div>
 
       <div class="Order-Content">
+        <!-- Boats -->
         <p class="OrderOption">Boats</p>
         <table>
-          <tr><td>Standard Version</td><td>U.S.$ 3500</td><td><input type="number" placeholder="No." value="1"></td></tr>
+          <tr><td>Standard Version</td><td class="price sv">U.S.$ 3500</td>
+            <td><input id="sv" onchange="calcPrice(this.id)" type="number" placeholder="No." value="1"></td></tr>
         </table>
         <hr>
-
+        <!-- Options -->
         <p class="OrderOption">Options</p>
         <table>
-          <tr><td>Nylon Spinnaker & Deck Gear</td><td class="price">U.S.$ 435</td><td><input type="number" placeholder="No."></td></tr>
-          <tr><td>Tilting Machanism Kit</td><td>U.S.$ 2900</td><td><input type="number" placeholder="No."></td></tr>
-          <tr><td>GP Racing Mainsail</td><td>U.S.$ 645</td><td><input type="number" placeholder="No."></td></tr>
-          <tr><td>GP Racing Jib</td><td>U.S.$ 195</td><td><input type="number" placeholder="No."></td></tr>
-          <tr><td>GP Racing Asymmetric Spinnaker</td><td>U.S.$ 305</td><td><input type="number" placeholder="No."></td></tr>
+          <tr><td>Nylon Spinnaker & Deck Gear</td><td class="price s">U.S.$ 435</td>
+            <td><input id="s" onchange="calcPrice(this.id)" type="number" placeholder="No." onchange=""></td></tr>
+          <tr><td>Tilting Machanism Kit</td><td class=" price t">U.S.$ 2900</td>
+            <td><input id="t" onchange="calcPrice(this.id)" type="number" placeholder="No."></td></tr>
+          <tr><td>GP Racing Mainsail</td><td class="price rm">U.S.$ 645</td>
+            <td><input id="rm" onchange="calcPrice(this.id)" type="number" placeholder="No."></td></tr>
+          <tr><td>GP Racing Jib</td><td class="price rj">U.S.$ 195</td>
+            <td><input id="rj" onchange="price calcPrice(this.id)" type="number" placeholder="No."></td></tr>
+          <tr><td>GP Racing Asymmetric Spinnaker</td><td class="rs">U.S.$ 305</td>
+            <td><input id="rs"onchange="price calcPrice(this.id)" type="number" placeholder="No."></td></tr>
         </table>
         <hr>
-
+        <!-- Spare Parts -->
         <p class="OrderOption">Spare Parts</p>
         <table>
-          <tr><td>Dacron MainSail</td><td>U.S.$ 275</td><td><input type="number" placeholder="No." value="0"></td></tr>
-          <tr><td>Dacron Jib</td><td>U.S.$ 120</td><td><input type="number" placeholder="No." value="0"></td></tr>
-          <tr><td>Nylon Asymmetric Spinnaker</td><td>U.S.$ 250</td><td><input type="number" placeholder="No." value="0"></td></tr>
-          <tr><td>Basic Crew/Para Seat</td><td>U.S.$ 275</td><td><input type="number" placeholder="No." value="0"></td></tr>
-          <tr><td>Basic Helmsman/Quad Seat</td><td>U.S.$ 385</td><td><input type="number" placeholder="No." value="0"></td></tr>
-          <tr><td>Individual Rudderblade</td><td>U.S.$ 275</td><td><input type="number" placeholder="No." value="0"></td></tr>
+          <tr><td>Dacron MainSail</td><td class="price smain">U.S.$ 0</td>
+            <td><input type="number" id="smain" onchange="calcPrice(this.id)" placeholder="No." value="0"></td></tr>
+          <tr><td>Dacron Jib</td><td class="price sjib">U.S.$ 0</td>
+            <td><input type="number" id="sjib" onchange="calcPrice(this.id)" placeholder="No." value="0"></td></tr>
+          <tr><td>Nylon Asymmetric Spinnaker</td><td class="price sspin">U.S.$ 0</td>
+            <td><input type="number" id="sspin" onchange="calcPrice(this.id)" placeholder="No." value="0"></td></tr>
+          <tr><td>Basic Crew/Para Seat</td><td class="price screw">U.S.$ 0</td>
+            <td><input type="number" id="screw"onchange="calcPrice(this.id)" placeholder="No." value="0"></td></tr>
+          <tr><td>Basic Helmsman/Quad Seat</td><td class="price shelm">U.S.$ 0</td>
+            <td><input type="number" id="shelm" onchange="calcPrice(this.id)" placeholder="No." value="0"></td></tr>
+          <tr><td>Individual Rudderblade</td><td class="price srudder">U.S.$ 0</td>
+            <td><input type="number" id="srudder" onchange="calcPrice(this.id)" placeholder="No." value="0"></td></tr>
         </table>
         <hr>
-
+        <!-- Other Equipment -->
         <p class="OrderOption">Other Equipment</p>
         <table>
-          <tr><td>Deck Cover</td><td>U.S.$ 190</td><td><input type="number" placeholder="No." value="0"></td></tr>
+          <tr><td>Deck Cover</td><td class="price sdeck">U.S.$ 0</td>
+            <td><input type="number" id="sdeck" onchange="calcPrice(this.id)" placeholder="No." value="0"></td></tr>
         </table>
         <hr>
-
+        <!-- Total Price -->
         <p class="OrderOption">Total Price</p>
-        <div class="total">
-          <p>U.S. $</p>
-          <p>Order Now</p>
+        <div class="OrderTotal">
+          <p id="total">U.S. $</p>
+          <span>Order Now</span>
         </div>
         <br>
 
