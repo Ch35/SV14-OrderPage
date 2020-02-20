@@ -2,6 +2,7 @@
 function openNav(overlayClass){
   var overlay = document.getElementsByClassName(overlayClass)[0];
 
+  document.getElementsByClassName("Order-Form")[0].style.display = "none";
   document.getElementById("orderTitle").innerHTML = "Terms and Conditions";
   document.getElementsByClassName("Terms-Content")[0].style.display = "block";
   document.getElementsByClassName("Order-Content")[0].style.display = "none";
@@ -67,7 +68,6 @@ function AcceptTerms(){
 
   calcTotal();
 }
-
 
 // Calculate price
 function calcPrice(elmPrice){
@@ -140,6 +140,12 @@ function calcTotal(){
   }
 
   ePrice.innerHTML = "U.S.$ " + total;
+}
+
+// Load Order Form
+function showForm(){
+  document.getElementsByClassName("Order-Form")[0].style.display = "block";
+  document.getElementsByClassName("Order-Content")[0].style.display = "none";
 }
 
 //Toggle Customization parts for boat

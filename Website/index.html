@@ -55,6 +55,7 @@
     </div>
   </div>
 
+
   <!--Order-->
   <div class="Order-Wrapper">
     <div class="wrapper">
@@ -62,7 +63,7 @@
         <h1 id="orderTitle">Terms and Conditions</h1>
         <a href="javascript:void(0)" class="closeBtn" id="Order-Wrapper" onclick="closeNav(this.id)">CLOSE</a>
       </div>
-
+      <!-- /////////////// -->
       <div class="Terms-Content">
         <p>All prices quoted are Ex. Work Shanghai (Shanghai Far East Boats Co., Ltd.) Shipping costs, duties, transfers and other local taxes including VAT if applicable are for the customer's account.
 
@@ -88,7 +89,7 @@
         </div>
         <br>
       </div>
-
+      <!-- /////////////// -->
       <div class="Order-Content">
         <!-- Boats -->
         <p class="OrderOption">Boats</p>
@@ -140,10 +141,35 @@
         <p class="OrderOption">Total Price</p>
         <div class="OrderTotal">
           <p id="total">U.S. $</p>
-          <span>Order Now</span>
+          <span onclick="showForm()">Order Now</span>
         </div>
         <br>
-
+      </div>
+      <!-- /////////////// -->
+      <div class="Order-Form">
+        <!-- <form action="/action_page.php"> -->
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="name" placeholder="Your full name..">
+          </div>
+        </div>
+        <!-- //// -->
+        <div class="row">
+          <div class="col-25">
+            <label for="tAddress">Address</label>
+          </div>
+          <div class="col-75">
+            <!-- <input id="tAddress" name="Address" placeholder="Your address..." style="height: 200px"> -->
+            <textarea name="Address" id="tAddress" rows="4" style="height: 200px" placeholder="Your address.."></textarea>
+          </div>
+        </div>
+        <!-- //// -->
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
       </div>
     </div>
   </div>

@@ -342,6 +342,58 @@ input[type=number]{
   cursor: pointer;
   font-weight: bold;
 }
+
+.Order-Form{
+  height: 88%;
+  display: none;
+  overflow-y: scroll;
+}
+input[type=text], textarea{
+  width: 100%;
+  padding: 12px;
+  color: white;
+  font-family: "Inconsolata", monospace;
+  font-size: 16px;
+  border: none;
+  background-color: #2D2D2D;
+  resize: vertical;
+}
+label{
+  padding: 12px 12px 12px 0;
+  font-size: 20px;
+  color: white;
+  display: inline-block;
+}
+input[type=submit]{
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input[type=submit]:hover{
+  background: #F6364D;
+}
+.col-25{
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75{
+  float: right;
+  width: 75%;
+  margin-top: 6px;
+}
+.row{
+  padding-right: 10px;
+}
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
 /*==============*/
 
 /*Menu-Overlay
