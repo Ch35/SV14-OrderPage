@@ -69,6 +69,7 @@ function AcceptTerms(){
   calcTotal();
 }
 
+
 // Calculate price
 function calcPrice(elmPrice){
   var ePrice = document.getElementsByClassName(elmPrice)[0];
@@ -142,11 +143,13 @@ function calcTotal(){
   ePrice.innerHTML = "U.S.$ " + total;
 }
 
+
 // Load Order Form
 function showForm(){
   document.getElementsByClassName("Order-Form")[0].style.display = "block";
   document.getElementsByClassName("Order-Content")[0].style.display = "none";
 }
+
 
 //Toggle Customization parts for boat
 function togglePart(partClass){
@@ -178,4 +181,81 @@ function toggleSpecifications(){
 
   //Togles style
   div.classList.toggle("Specifications-Content");
+}
+
+
+// Send email
+function sendEmail(){
+  var elQuantity = document.querySelectorAll("table input");
+  var elPrice = document.querySelectorAll(".price");
+  var idDetails = ["tName", "tPhone", "tEmail", "tAddress", "tMsg", "tShipping"];
+  var elDetails;
+  var details = "";
+  var msg = "";
+  var total = "<br>Total Cost: " + document.getElementById("total").innerHTML+"<br>";
+  var items = "";
+  var i;
+
+  for(i = 0; i < 6; i++){
+    elDetails = document.getElementById(idDetails[i]);
+    details += idDetails[i].replace("t","")+": "+elDetails.value+"<br>";
+  }
+
+  for(i = 0; i < elQuantity.length; i++){
+    if(elQuantity[i].value >= 1){
+      switch(elQuantity[i].id){
+        //Main Options
+        case "sv":
+          items += "Boat x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br><br>";
+          break;
+        case "s":
+          items += "Nylon Spinnaker & Deck Gear x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br>";
+          break;
+        case "t":
+          items += "Titling Mechanism Kit x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br>";
+          break;
+        case "rm":
+          items += "GP Racing Mainsail x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br>";
+          break;
+        case "rj":
+          items += "GP Racing Jib x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br>";
+          break;
+        case "rs":
+          items += "GP Racing Asymmetric Spinnaker x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br><br>";
+          break;
+        //Spare Parts
+        case "smain":
+          items += "Dacron MainSail x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br>";
+          break;
+        case "sjib":
+          items += "Dacron Jib x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br>";
+          break;
+        case "sspin":
+          items += "Nylon Asymmetric Spinnaker Kit x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br>";
+          break;
+        case "screw":
+          items += "Basic Crew/Para Seat x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br>";
+          break;
+        case "shelm":
+          items += "Basic Helmsman/Quad Seat x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br>";
+          break;
+        case "srudder":
+          items += "Individual Rudderblade x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br>";
+          break;
+        case "sdeck":
+          items += "Deck Cover x"+elQuantity[i].value+" = "+elPrice[i].innerHTML+"<br>";
+          break;
+      }
+    }
+  }
+   msg = "<h1>Order</h1><br>"+"<strong>Client Details</strong><hr>"+details+"<br><strong>Order Details</strong><hr>"+items+total;
+
+
+  Email.send({
+    SecureToken: "fb9d7bdb-a257-47a6-aed0-e749ea52e4e6",
+    To : 'ryangray1111@gmail.com',
+    From : "sv14order@gmail.com",
+    Subject : "New Order",
+    Body : msg
+  }).then(message => alert("Order Sent"));
 }

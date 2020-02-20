@@ -8,8 +8,8 @@
   <title>Order - SV14</title>
   <link rel="stylesheet" href="styles.css" type="text/css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/menuOverlay.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript" src="js/general.js"></script>
 </head>
 
 <body>
@@ -103,14 +103,14 @@
         <table>
           <tr><td>Nylon Spinnaker & Deck Gear</td><td class="price s">U.S.$ 435</td>
             <td><input id="s" onchange="calcPrice(this.id)" type="number" placeholder="No." onchange=""></td></tr>
-          <tr><td>Tilting Machanism Kit</td><td class=" price t">U.S.$ 2900</td>
+          <tr><td>Tilting Mechanism Kit</td><td class=" price t">U.S.$ 2900</td>
             <td><input id="t" onchange="calcPrice(this.id)" type="number" placeholder="No."></td></tr>
           <tr><td>GP Racing Mainsail</td><td class="price rm">U.S.$ 645</td>
             <td><input id="rm" onchange="calcPrice(this.id)" type="number" placeholder="No."></td></tr>
           <tr><td>GP Racing Jib</td><td class="price rj">U.S.$ 195</td>
-            <td><input id="rj" onchange="price calcPrice(this.id)" type="number" placeholder="No."></td></tr>
-          <tr><td>GP Racing Asymmetric Spinnaker</td><td class="rs">U.S.$ 305</td>
-            <td><input id="rs"onchange="price calcPrice(this.id)" type="number" placeholder="No."></td></tr>
+            <td><input id="rj" onchange="calcPrice(this.id)" type="number" placeholder="No."></td></tr>
+          <tr><td>GP Racing Asymmetric Spinnaker</td><td class="price rs">U.S.$ 305</td>
+            <td><input id="rs"onchange="calcPrice(this.id)" type="number" placeholder="No."></td></tr>
         </table>
         <hr>
         <!-- Spare Parts -->
@@ -147,13 +147,34 @@
       </div>
       <!-- /////////////// -->
       <div class="Order-Form">
-        <!-- <form action="/action_page.php"> -->
+        <p><strong>Once a 30% deposit is received by "Far East Boats CO, LTD", this order will be processed.</strong><br>
+        This order will be sent to sailing@SV14.org</p>
+        <p>Client Details</p>
+        <hr>
         <div class="row">
           <div class="col-25">
-            <label for="fname">Name</label>
+            <label for="tName">Name</label>
           </div>
           <div class="col-75">
-            <input type="text" id="fname" name="name" placeholder="Your full name..">
+            <input type="text" id="tName" name="name" placeholder="Your full name..">
+          </div>
+        </div>
+        <!-- //// -->
+        <div class="row">
+          <div class="col-25">
+            <label for="tPhone">Phone</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="tPhone" name="phone" placeholder="Your phone number..">
+          </div>
+        </div>
+        <!-- //// -->
+        <div class="row">
+          <div class="col-25">
+            <label for="tEmail">Email</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="tEmail" name="email" placeholder="Your email..">
           </div>
         </div>
         <!-- //// -->
@@ -162,14 +183,37 @@
             <label for="tAddress">Address</label>
           </div>
           <div class="col-75">
-            <!-- <input id="tAddress" name="Address" placeholder="Your address..." style="height: 200px"> -->
-            <textarea name="Address" id="tAddress" rows="4" style="height: 200px" placeholder="Your address.."></textarea>
+            <textarea name="Address" id="tAddress" rows="4" style="height: 100px" placeholder="Your address.."></textarea>
+          </div>
+        </div>
+        <!-- //// -->
+        <p>Optional order questions/requests</p>
+        <hr>
+        <div class="row">
+          <div class="col-25">
+            <label for="tMsg">Message</label>
+          </div>
+          <div class="col-75">
+            <textarea name="Message" id="tMsg" rows="4" style="height: 100px" placeholder="Message.."></textarea>
+          </div>
+        </div>
+        <!-- //// -->
+        <p>Shipping address(Only if different from invoice address). Physical addresses only.</p>
+        <hr>
+        <div class="row">
+          <div class="col-25">
+            <label for="tShipping">Address</label>
+          </div>
+          <div class="col-75">
+            <textarea name="Shipping" id="tShipping" rows="4" style="height: 100px" placeholder="Shipping address.."></textarea>
           </div>
         </div>
         <!-- //// -->
         <div class="row">
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" onclick="sendEmail()">
         </div>
+        <!-- //// -->
+        <br>
       </div>
     </div>
   </div>
