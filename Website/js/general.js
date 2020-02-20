@@ -253,7 +253,7 @@ function sendEmail(){
 
   Email.send({
     SecureToken: "fb9d7bdb-a257-47a6-aed0-e749ea52e4e6",
-    To : 'ryangray1111@gmail.com',
+    To : 'sailing@SV14.org',
     From : "sv14order@gmail.com",
     Subject : "New Order",
     Body : msg
