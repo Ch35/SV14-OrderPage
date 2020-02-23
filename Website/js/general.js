@@ -43,27 +43,27 @@ function AcceptTerms(){
 
   if(spinnaker.style.opacity == "1"){
     input[1].value = "1";
-    document.getElementsByClassName("s")[0].innerHTML = "U.S.$ 435";
+    document.getElementsByClassName("s")[0].innerHTML = "U.S.$ 500";
   } else {input[1].value = "0"; document.getElementsByClassName("s")[0].innerHTML = "U.S.$ 0";}
 
   if(rSpinnaker.style.opacity == "1"){
     input[5].value = "1";
-    document.getElementsByClassName("rs")[0].innerHTML = "U.S.$ 2900"
+    document.getElementsByClassName("rs")[0].innerHTML = "U.S.$ 315"
   } else {input[5].value = "0"; document.getElementsByClassName("rs")[0].innerHTML = "U.S.$ 0";}
 
   if(rJib.style.opacity == "1"){
     input[4].value = "1";
-    document.getElementsByClassName("rj")[0].innerHTML = "U.S.$ 195";
+    document.getElementsByClassName("rj")[0].innerHTML = "U.S.$ 215";
   } else {input[4].value = "0"; document.getElementsByClassName("rj")[0].innerHTML = "U.S.$ 0";}
 
   if(rSail.style.opacity == "1"){
     input[3].value = "1";
-    document.getElementsByClassName("rm")[0].innerHTML = "U.S.$ 645";
+    document.getElementsByClassName("rm")[0].innerHTML = "U.S.$ 670";
   } else {input[3].value = "0"; document.getElementsByClassName("rm")[0].innerHTML = "U.S.$ 0";}
 
   if(seats.style.opacity == "1"){
     input[2].value = "1";
-    document.getElementsByClassName("t")[0].innerHTML = "U.S.$ 2900";
+    document.getElementsByClassName("t")[0].innerHTML = "U.S.$ 3200";
   } else {input[2].value = "0"; document.getElementsByClassName("t")[0].innerHTML = "U.S.$ 0";}
 
   calcTotal();
@@ -82,44 +82,44 @@ function calcPrice(elmPrice){
 
   switch(elmPrice){
     case "sv": //Standard Version
-      cost = 3500;
+      cost = 3700;
       break;
     case "s": //Nylon Spinnaker
-      cost = 435;
+      cost = 500;
       break;
     case "t": //Tilting mechanism
-      cost = 2900;
+      cost = 3200;
       break;
     case "rm": //GP Racing MainSail
-      cost = 645;
+      cost = 670;
       break;
     case "rj": //GP Racing Jib
-      cost = 195;
+      cost = 215;
       break;
     case "rs": //GP Racing Spinnaker
-      cost = 305;
+      cost = 315;
       break;
       //
     case "smain": //Dacron MainSail
-      cost = 275;
+      cost = 300;
       break;
     case "sjib": //Dacron Jib
-      cost = 120;
+      cost = 130;
       break;
     case "sspin": //Nylon Spinnaker
-      cost = 250;
+      cost = 270;
       break;
     case "screw": //Basic Crew/Para Seat
-      cost = 275;
+      cost = 300;
       break;
     case "shelm": //Basic Helmsman
-      cost = 385;
+      cost = 420;
       break;
     case "srudder": //Individual Rudderblade
       cost = 275;
       break;
     case "sdeck": //Deck Cover
-      cost = 190;
+      cost = 210;
       break;
   }
   total = cost * eQuantity.value;
